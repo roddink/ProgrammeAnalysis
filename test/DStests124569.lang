@@ -1,0 +1,18 @@
+program
+  int buff[5];
+  int index;
+  int wlb;
+  int wub;
+  index := 4;			(*label 1*)
+  wlb := -5;			(*label 2*)
+  wub := 7;			(*label 3*)
+  while index >= wlb do		(*label 4*)
+    buff[index] := 10;		(*label 5*)
+    index := index - 1;		(*label 6*)
+  od
+  index := 0;			(*label 7*)
+  while index <= wub do		(*label 8*)
+    write buff[index];		(*label 9*)
+    index := index+1;		(*label 10*)
+  od
+end
